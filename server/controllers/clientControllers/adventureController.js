@@ -43,7 +43,7 @@ exports.createOrder = async (req, res) => {
 
     console.log('Fetched adventure details:', adventureDetails);
 
-    const totalPrice = (adults * adventureDetails.details.duration.pricing.adults) + (children * adventureDetails.details.pricing.children);
+    const totalPrice = (adults * adventureDetails.details.pricing.adults) + (children * adventureDetails.details.pricing.children);
 
     const order = new Order({
       user: req.user._id,
